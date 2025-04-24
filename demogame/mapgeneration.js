@@ -15,12 +15,11 @@ export default class MapGeneration {
 
         // Cluster parameters
         this.clusterCenters = [];
-        this.clusterDistance = 20;    // Minimum distance between cluster centers (in cells)
-        const r = this.clusterRadius;     // Radius of each cluster (in cells)
+        this.clusterDistance = 25;    // Minimum distance between cluster centers (in cells)
         this.clusterProbability = 0.02; // Chance to start a cluster when generating each cell
 
         this.minClusterRadius = 3;
-        this.maxClusterRadius = 8; 
+        this.maxClusterRadius = 6;
 
         this.adjustCanvasSize();
         this.generateMap(); // Only called once here
@@ -72,7 +71,6 @@ export default class MapGeneration {
         this.clusterCenters.push({ x: cx, y: cy });
     }
     
-
     generateMap() {
         this.adjustCanvasSize();
         this.clusterCenters = []; // reset clusters
@@ -91,7 +89,7 @@ export default class MapGeneration {
                 if (Math.random() < this.clusterProbability && this.isFarFromClusters(x, y)) {
                     this.generateCluster(x, y);
                 } else if (this.mapState[x][y] === undefined) {
-                    // Fallback single-cell generation
+                    // Fallback: leave empty
                     this.mapState[x][y] = null;
                 }
             }
@@ -124,12 +122,20 @@ export default class MapGeneration {
 
         for (let x in this.mapState) {
             for (let y in this.mapState[x]) {
+                const cell = this.mapState[x][y];
                 const screenX = x * cellSize - this.cameraX;
                 const screenY = y * cellSize - this.cameraY;
+                // Draw cell background/grid
                 this.ctx.strokeStyle = "#ccc";
                 this.ctx.strokeRect(screenX, screenY, cellSize, cellSize);
-                if (this.mapState[x][y] === "node") {
+                // Fill nodes
+                if (cell === "node") {
                     this.ctx.fillStyle = "lightyellow";
+                    this.ctx.fillRect(screenX, screenY, cellSize, cellSize);
+                }
+                // Fill objects if present
+                else if (cell && cell.type) {
+                    this.ctx.fillStyle = cell.color;
                     this.ctx.fillRect(screenX, screenY, cellSize, cellSize);
                 }
             }
