@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../loginstyles.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopProfile</title>
+    <link rel="icon" type="image/x-icon" href="/Images/faviconimage.jpg">
+</head>
+<body>
+     <section class="Profilesection"><!--Benutze section einfach so, würde auch mit div gehen
+            solange der div denn ganzen body abdeckt -->
+        <div class="Profilemainbody">
+           <div class="profileslider">
+                <ul class="profileSideBar">
+                    <li><button class="icon-button" onclick="goHome()">
+                        <img src="/Images/profileimages/home.png" alt="Home"></button></li>
+
+                    <li><a href="../Library/library.html">
+                        <img src="/Images/profileimages/controller.png" alt="Games"></a></li>
+
+                    <li><button class="icon-button" onclick="goToFriends()">
+                        <img src="/Images/profileimages/person.png" alt="Profile"></button></li>
+                        
+                    <li><button class="icon-button" onclick="goToSettings()">
+                        <img src="/Images/profileimages/settings.png" alt="Settings"></button></li>
+                </ul>            
+            </div>
+            <!-- small spot for arrow -->
+            <button onclick="toggleMinWidth()" class="sidebarArrow">
+                <span class="arrowicon">➤</span>
+            </button>
+            <div class="profileblock" >
+                <div id="mainProfileBlock">
+                    <div class = "profileHeader">
+                        <img src="/Images/Websiteimage.png" alt="ProfilePicture" id="ProfilePicture">
+                        <h1 id="headerran">Profile Name</h1> 
+                    </div>
+                    <div class="profileData">
+                        <!-- Warscheinlich auch ne liste im endeffekt -->
+                        <a href="../Main.html">Home</a>
+                        
+                    </div>
+
+                    <div class = "RecentGames">
+                        <div id="titleRecentGames">
+                            Owned Games
+                            <div id="imagesOfOwnedGames">
+
+                            </div>
+                        </div>
+                        <div class="recentGamesImages"></div>
+                    </div>
+                </div>
+                <div id="friendsProfileBlock" style="display: none;">
+                    <div class="friendsMainblock"> 
+                        <div class="friendrequests"> Current friends requests:
+                            <div id="friendrequestsbody"></div>
+                        </div>
+                        <div class="otherusers"> Other users:
+                            <div class="otherusersbody"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="settingsProfileBlock" style="display: none;">
+                </div>
+            </div>
+
+            <div class="profileInfo">
+                <div class="innerProfileInfo" id="mainProfileInfo">
+                    <div id="currentCurency">
+                    </div>
+                    <div>
+                        Games:
+                        <div id="gamescontainer">
+                        </div>
+                    </div>
+                    <div>
+                        Wischlist:
+                        <div id="wischlistcontainer">
+                        </div>
+                    </div>
+                    <button onclick= "logout()">logout</button>
+                </div>
+                <div id="friendsProfileInfo" style="display: none;">
+                    <div class="innerfriendsinfo">
+                        <h3 class="friendsinfoheader">Current Friends:</h3>
+                        <div id="friendslist"></div>
+                    </div>
+                </div>
+                <div id="settingsProfileInfo" style="display: none;">
+                    <div class="innersettingsinfo">
+                        <input type="text" id="amount" placeholder="Enter amount">
+                        <p></p>
+                        <button onclick="updateCurrency()" class="Button" id="writingButton">click to add currency</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="profilelogic.js"></script>
+</body>
+</html>
+
+<!--
+    mainprofile     
+    statistiks // bis jetzt link zu library (wenn das game funktioniert statistiken einbauen)
+    settings
+    (friends)
+-->

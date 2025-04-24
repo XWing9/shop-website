@@ -1,0 +1,46 @@
+"filename", "language", "JavaScript", "CSS", "JSON", "HTML", "XML", "comment", "blank", "total"
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\.idea\Responsive Web javascript.iml", "XML", 0, 0, 0, 0, 12, 0, 0, 12
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\.idea\material_theme_project_new.xml", "XML", 0, 0, 0, 0, 13, 0, 0, 13
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\.idea\modules.xml", "XML", 0, 0, 0, 0, 8, 0, 0, 8
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\Data\data.json", "JSON", 0, 0, 24, 0, 0, 0, 0, 24
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\Data\mapdata.json", "JSON", 0, 0, 11, 0, 0, 0, 3, 14
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\Main.html", "HTML", 0, 0, 0, 160, 0, 1, 1, 162
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\Profile\Profile.html", "HTML", 0, 0, 0, 62, 0, 9, 7, 78
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\Profile\profile.css", "CSS", 0, 65, 0, 0, 0, 0, 2, 67
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\Profile\profilelogic.js", "JavaScript", 62, 0, 0, 0, 0, 9, 19, 90
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\backend\server.js", "JavaScript", 70, 0, 0, 0, 0, 16, 22, 108
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\demogame\game.css", "CSS", 0, 78, 0, 0, 0, 4, 2, 84
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\demogame\game.html", "HTML", 0, 0, 0, 34, 0, 7, 3, 44
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\demogame\gamelogic.js", "JavaScript", 109, 0, 0, 0, 0, 15, 30, 154
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\demogame\mapgeneration.js", "JavaScript", 109, 0, 0, 0, 0, 14, 29, 152
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\demogame\objectdata.js", "JavaScript", 33, 0, 0, 0, 0, 0, 4, 37
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\demogame\objectlogic.js", "JavaScript", 49, 0, 0, 0, 0, 2, 9, 60
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\logic.js", "JavaScript", 77, 0, 0, 0, 0, 10, 26, 113
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\login.html", "HTML", 0, 0, 0, 298, 0, 0, 2, 300
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\loginlogic.js", "JavaScript", 25, 0, 0, 0, 0, 0, 7, 32
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\loginstyles.css", "CSS", 0, 157, 0, 0, 0, 0, 4, 161
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\package-lock.json", "JSON", 0, 0, 829, 0, 0, 0, 1, 830
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\package.json", "JSON", 0, 0, 16, 0, 0, 0, 1, 17
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\signup.css", "CSS", 0, 180, 0, 0, 0, 0, 2, 182
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\signup.html", "HTML", 0, 0, 0, 296, 0, 0, 3, 299
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\signup.js", "JavaScript", 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\henri.haege\.vscode\Responsive Web javascript\style.css", "CSS", 0, 344, 0, 0, 0, 0, 9, 353
+"e:\Code\Websitecode\Responsive Web javascript\Main.html", "HTML", 0, 0, 0, -179, 0, 0, -2, -181
+"e:\Code\Websitecode\Responsive Web javascript\Profile\Profile.html", "HTML", 0, 0, 0, -36, 0, -3, -2, -41
+"e:\Code\Websitecode\Responsive Web javascript\Profile\profile.css", "CSS", 0, -39, 0, 0, 0, 0, -2, -41
+"e:\Code\Websitecode\Responsive Web javascript\Profile\profilelogic.js", "JavaScript", 0, 0, 0, 0, 0, 0, -1, -1
+"e:\Code\Websitecode\Responsive Web javascript\game.css", "CSS", 0, -78, 0, 0, 0, -4, -2, -84
+"e:\Code\Websitecode\Responsive Web javascript\game.html", "HTML", 0, 0, 0, -32, 0, -7, -4, -43
+"e:\Code\Websitecode\Responsive Web javascript\gamelogic.js", "JavaScript", -109, 0, 0, 0, 0, -15, -30, -154
+"e:\Code\Websitecode\Responsive Web javascript\logic.js", "JavaScript", -35, 0, 0, 0, 0, -1, -11, -47
+"e:\Code\Websitecode\Responsive Web javascript\login.html", "HTML", 0, 0, 0, -296, 0, 0, -3, -299
+"e:\Code\Websitecode\Responsive Web javascript\loginlogic.js", "JavaScript", 0, 0, 0, 0, 0, 0, -1, -1
+"e:\Code\Websitecode\Responsive Web javascript\loginstyles.css", "CSS", 0, -157, 0, 0, 0, 0, -4, -161
+"e:\Code\Websitecode\Responsive Web javascript\mapgeneration.js", "JavaScript", -109, 0, 0, 0, 0, -14, -29, -152
+"e:\Code\Websitecode\Responsive Web javascript\objectdata.js", "JavaScript", -33, 0, 0, 0, 0, 0, -4, -37
+"e:\Code\Websitecode\Responsive Web javascript\objectlogic.js", "JavaScript", -49, 0, 0, 0, 0, -2, -9, -60
+"e:\Code\Websitecode\Responsive Web javascript\style.css", "CSS", 0, -329, 0, 0, 0, 0, -9, -338
+"e:\Code\Websitecode\Responsive Web javascript\test.css", "CSS", 0, -180, 0, 0, 0, 0, -2, -182
+"e:\Code\Websitecode\Responsive Web javascript\test.html", "HTML", 0, 0, 0, -296, 0, 0, -3, -299
+"e:\Code\Websitecode\Responsive Web javascript\testlogic.js", "JavaScript", -26, 0, 0, 0, 0, 0, -5, -31
+"Total", "-", 173, 41, 880, 11, 33, 41, 64, 1243

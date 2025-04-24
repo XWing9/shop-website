@@ -1,0 +1,155 @@
+<head>
+    <!-- >VSCodeCounter: Count lines in workspace -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="logic.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault</title>
+    <link rel="icon" type="image/x-icon" href="/Images/faviconimage.jpg">
+</head>
+
+<body>
+    <div class="top-nav">
+        <img src="Images/faviconimage.jpg" alt="icon" width="5%" height="5%">
+        <ul class="options">
+            <li><a href="/Store/store.html">Store</a></li>
+            <li><a href="/News/news.html">News</a></li>
+            <li class="dropdown">
+                <a href="#">Games</a>
+                <div class="dropdown-content">
+                    <a href="/Store/store.html">Shop</a>
+                    <a href="/Wishlist/wischlist.html">Wishlist</a>
+                    <a href="/Library/library.html">Library</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Navigation</a>
+                <div class="dropdown-content">
+                    <a href="#block1">New Games</a>
+                    <a href="#block2">Popular Games</a>
+                    <a href="#block3">Top Game</a>
+                </div>
+            </li>
+        </ul>
+        <a href="login.html" id="login" class="Button2">Login</a>
+    </div>     
+    <div class="main">
+        <div class="Welcomeblock">
+            <div class="grid-item" id="Welcome">
+                <h1>Welcome to GameVault!</h1>
+                <p>Discover your new Favourite Game here!</p>
+                <div id="Welcomebuttons">
+                    <button class="Button" id="">Get started</button>
+                    <button class="Button2" id="">Explore</button>
+                </div>
+            </div>
+            <div id="Welcomeimage"><img src="/Images/Websiteimage2.png" alt=""></div>
+        </div>
+        <div class="grid-item" id="block1">
+            <div class="Products">
+                <h2 class = "Mainheaders" id="block1title">Check out our newest Games!</h2>
+                <div class="Productlists">
+                    <div class="Productcard">
+                        <img src="Images/populargamesimages/Satisfactory.png" alt="">
+                        <div class="Productcardtext">
+                            <h3>Satisfactory</h3>
+                            <p>
+                                Open world factory game for anyone who loves automation and
+                                numbers, while destroying and exploiting the ressources of the
+                                planet!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Productcard">
+                        <img src="Images/Trailmakers.png" alt="">
+                        <div class="Productcardtext">
+                            <h3>Trailmakers</h3>
+                            <p>
+                                Build whatever machines you like. Ships, planes, spaceships.
+                                Your imagantion is you only limit!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Productcard">
+                        <img src="Images/screeps.png" alt="">
+                        <div class="Productcardtext">
+                            <h3 class="prodheads">screeps</h3>
+                            <p>
+                                A sanbox game for programmers, manage your colony
+                                and expand it. Go to war with other players, or focus
+                                on resources. Its your choice, but theres a twist,
+                                instead of clicking buttons, you need to write code.
+                                For EVERY action your colony should do you need to write code.
+                                The code is written in Javascript and Typescript.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" id="block2">
+            <div>
+                <h2 class="Mainheaders">Currently Popular Games</h2>
+            </div>
+            <div class="slider">
+                <div class="slide-track">
+                </div>
+                <div class="slide-track2">
+                </div>
+            </div>
+            <div>
+                <button class="Button" id="Getstarted">Get Started!</button>
+            </div>
+        </div>
+        <div class="grid-item" id="block3">
+            <div class="Topproduct">
+                <img class="base" src="/Images/shapez.jpg" alt="hä?" >
+                <img class="overlay" src="/Images/shapez2.png" alt="">
+            </div>
+            <div class="Topproducttext">
+                <h2 class="Mainheaders">Check out our top product!</h2>
+                <p>Inspired by the shown games</p>
+                <div class="Topproductbutton">
+                    <a class="Button" href="Store/store.html" style="text-decoration: none;">Get now!</a>
+                    <button class="Button2" id="Playdemobutton" onclick="window.location.href='/demogame/game.html';">Play Demo!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="icons">
+            <h2>GameVault</h2>
+            <p>te sdhiugfhggghgh</p>
+        </div>
+        <div class="footeritems">
+            <div class="Company">
+                <ul class="footerlists">
+                    <h4>Company</h6>
+                    <li> text</li>
+                    <li> text</li>
+                    <li> text</li>
+                    <li> text</li>
+                </ul>
+            </div>
+            <div class="Help">
+                <ul class="footerlists">
+                    <h4>Help</h6>
+                    <li> text</li>
+                    <li> text</li>
+                    <li> text</li>
+                    <li> text</li>
+                </ul>
+            </div>
+            <div class="Resources">
+                <ul class="footerlists">
+                    <h4>Resources</h6>
+                    <li> text</li>
+                    <li> text</li>
+                    <li> text</li>
+                    <li> text</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,12 @@
+.cardImage{
+    max-width: 10vw;
+}
+.gameCard{
+    display: flex;
+    margin: 2vw;
+    width: 70vw;
+    align-self: stretch;
+    background-color: red;
+    border-radius: 10px;
+    transition: transform 1s ease;
+}

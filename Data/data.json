@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "username": "dev",
+      "password": "dev",
+      "id": 1,
+      "currency": 30,
+      "ownedGames": [
+        "Satisfactory",
+        "Bloodborne",
+        "Elden Ring"
+      ],
+      "Wishlist": [
+        "Factorio",
+        "Euro Truck Simulator 2",
+        "SnowRunner",
+        "Starfield"
+      ],
+      "friends": [
+        "anotherUser"
+      ]
+    },
+    {
+      "username": "anotherUser",
+      "password": "1",
+      "id": 2,
+      "currency": 0,
+      "ownedGames": [
+        "Satisfactory"
+      ],
+      "Wishlist": [],
+      "friends": []
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Elden Ring",
+    "release_date": "2022-02-25",
+    "size": "60 GB",
+    "average_playtime": "100+ hours",
+    "genre": "Action RPG, Open World, Soulslike",
+    "description": "An open-world action RPG developed by FromSoftware, featuring challenging combat, deep lore, and vast exploration with horseback travel and dungeons.",
+    "price": "€59.99",
+    "image": "../Images/shopimages/EldenRing.jpg"
+  },
+  {
+    "name": "Dark Souls III",
+    "release_date": "2016-03-24",
+    "size": "25 GB",
+    "average_playtime": "50-100 hours",
+    "genre": "Action RPG, Soulslike",
+    "description": "The final entry in the Dark Souls trilogy, known for its brutal difficulty, atmospheric world, and rewarding combat mechanics.",
+    "price": "€39.99",
+    "image": "../Images/shopimages/darksouls3.avif"
+  },
+  {
+    "name": "Bloodborne",
+    "release_date": "2015-03-24",
+    "size": "27 GB",
+    "average_playtime": "40-80 hours",
+    "genre": "Action RPG, Soulslike, Horror",
+    "description": "A gothic horror-inspired action RPG with fast-paced combat, Lovecraftian themes, and an intricate interconnected world.",
+    "price": "€19.99",
+    "image": "../Images/shopimages/bloodborne.jpg"
+  },
+  {
+    "name": "Sekiro: Shadows Die Twice",
+    "release_date": "2019-03-22",
+    "size": "25 GB",
+    "average_playtime": "30-50 hours",
+    "genre": "Action-Adventure, Soulslike",
+    "description": "A samurai-inspired action game with a unique parry-based combat system, stealth mechanics, and a deep story set in feudal Japan.",
+    "price": "€29.99",
+    "image": "../Images/shopimages/seiko.webp"
+  },
+  {
+    "name": "Satisfactory",
+    "release_date": "2019-03-19 (Early Access)",
+    "size": "15 GB",
+    "average_playtime": "100+ hours",
+    "genre": "Factory Building, Automation, Open World",
+    "description": "A first-person factory-building game where players automate production lines on an alien planet while exploring and managing resources.",
+    "price": "€29.99",
+    "image": "../Images/shopimages/satisfactory.jpg"
+  },
+  {
+    "name": "Factorio",
+    "release_date": "2020-08-14",
+    "size": "3 GB",
+    "average_playtime": "100+ hours",
+    "genre": "Automation, Strategy, Base Building",
+    "description": "A 2D factory-building game that challenges players to design complex automated systems while defending against alien creatures.",
+    "price": "€30.00",
+    "image": "../Images/shopimages/factorio.webp"
+  },
+  {
+    "name": "Dyson Sphere Program",
+    "release_date": "2021-01-21 (Early Access)",
+    "size": "3 GB",
+    "average_playtime": "50-200 hours",
+    "genre": "Automation, Space Simulation, Strategy",
+    "description": "A sci-fi factory-building game where players construct a Dyson Sphere to harness the power of a star, managing resources across a galactic scale.",
+    "price": "€19.99",
+    "image": "../Images/shopimages/Dyson Sphere Program.jpg"
+  },
+  {
+    "name": "Cities: Skylines II",
+    "release_date": "2023-10-24",
+    "size": "60 GB",
+    "average_playtime": "50-150 hours",
+    "genre": "City Builder, Simulation, Strategy",
+    "description": "A deep city-building simulator that allows players to design, manage, and optimize cities with realistic traffic, economy, and environmental systems.",
+    "price": "€39.99",
+    "image": "../Images/shopimages/Cities Skylines II.webp"
+  },
+  {
+    "name": "Euro Truck Simulator 2",
+    "release_date": "2012-10-19",
+    "size": "12 GB",
+    "average_playtime": "50-500 hours",
+    "genre": "Driving Simulation, Open World",
+    "description": "A realistic truck driving simulator where players transport goods across Europe, upgrade vehicles, and manage their trucking business.",
+    "price": "€19.99",
+    "image": "../Images/shopimages/ETS.jpg"
+  },
+  {
+    "name": "American Truck Simulator",
+    "release_date": "2016-02-02",
+    "size": "7 GB",
+    "average_playtime": "50-500 hours",
+    "genre": "Driving Simulation, Open World",
+    "description": "A trucking simulation game that lets players drive across the U.S., delivering cargo, managing a trucking company, and exploring iconic landscapes.",
+    "price": "€19.99",
+    "image": "../Images/shopimages/American Truck Simulator.webp"
+  },
+  {
+    "name": "SnowRunner",
+    "release_date": "2020-04-28",
+    "size": "25 GB",
+    "average_playtime": "50-100 hours",
+    "genre": "Off-Road Simulation, Driving",
+    "description": "An extreme off-road trucking simulator where players navigate difficult terrain, complete contracts, and upgrade vehicles in a highly detailed physics engine.",
+    "price": "€39.99",
+    "image": "../Images/shopimages/snowrunner.avif"
+  },
+  {
+    "name": "Starfield",
+    "release_date": "2023-09-06",
+    "size": "125 GB",
+    "average_playtime": "30-100 hours",
+    "genre": "Sci-Fi RPG, Open World",
+    "description": "A space exploration RPG by Bethesda, offering deep character customization, ship building, and an expansive universe with over 1,000 planets to explore.",
+    "price": "€69.99",
+    "image": "../Images/shopimages/Starfield.png"
+  },
+  {
+    "name": "Baldur's Gate 3",
+    "release_date": "2023-08-03",
+    "size": "150 GB",
+    "average_playtime": "100-200 hours",
+    "genre": "RPG, Strategy, Turn-Based",
+    "description": "A story-driven RPG based on Dungeons & Dragons rules, featuring rich character interactions, deep tactical combat, and player-driven narratives.",
+    "price": "€59.99",
+    "image": "../Images/shopimages/baldursgate.jpg"
+  },
+  {
+    "name": "Hogwarts Legacy",
+    "release_date": "2023-02-10",
+    "size": "85 GB",
+    "average_playtime": "40-80 hours",
+    "genre": "Action RPG, Open World, Fantasy",
+    "description": "An open-world RPG set in the Harry Potter universe, allowing players to attend Hogwarts, learn magic, and uncover hidden secrets in the wizarding world.",
+    "price": "€59.99",
+    "image": "../Images/shopimages/hogwartslegacy.avif"
+  },
+  {
+    "name": "No Man's Sky",
+    "release_date": "2016-08-09",
+    "size": "15 GB",
+    "average_playtime": "50-500+ hours",
+    "genre": "Sci-Fi, Exploration, Survival",
+    "description": "A massive procedurally-generated universe where players explore planets, mine resources, upgrade ships, and survive in a constantly evolving galaxy.",
+    "price": "€24.99",
+    "image": "../Images/shopimages/nomanssky.jpg"
+  },
+  {
+    "name": "Cyberpunk 2077: Phantom Liberty",
+    "release_date": "2023-09-26",
+    "size": "70 GB",
+    "average_playtime": "20-40 hours",
+    "genre": "Action RPG, Open World, Sci-Fi",
+    "description": "An expansion for Cyberpunk 2077, introducing a spy-thriller storyline, improved mechanics, and new areas to explore in the dystopian world of Night City.",
+    "price": "€69.99",
+    "image": "../Images/shopimages/cyberpunk.jpg"
+  },
+  {
+    "name": "The Witcher 3: Wild Hunt",
+    "release_date": "2015-05-19",
+    "size": "50 GB",
+    "average_playtime": "50-200 hours",
+    "genre": "Action RPG, Open World, Fantasy",
+    "description": "A deep RPG following Geralt of Rivia, a monster hunter navigating a rich, choice-driven world full of political intrigue and mythical creatures.",
+    "price": "€49.99",
+    "image": "../Images/shopimages/The Witcher 3 Wild Hunt.avif"
+  },
+  {
+    "name": "Monster Hunter: World",
+    "release_date": "2018-01-26",
+    "size": "48 GB",
+    "average_playtime": "100+ hours",
+    "genre": "Action RPG, Co-op, Hunting",
+    "description": "A co-op-focused action game where players hunt massive monsters, craft powerful gear, and master diverse weapons in large open environments.",
+    "price": "€59.99",
+    "image": "../Images/shopimages/monsterhunterworld.jpg"
+  },
+  {
+    "name": "Monster Hunter Rise",
+    "release_date": "2021-03-26",
+    "size": "23 GB",
+    "average_playtime": "50-100 hours",
+    "genre": "Action RPG, Co-op, Hunting",
+    "description": "A faster-paced entry in the Monster Hunter series with new traversal mechanics and hunting styles, optimized for both solo and multiplayer experiences.",
+    "price": "€39.99",
+    "image": "../Images/shopimages/Monster Hunter Rise.jpg"
+  },
+  {
+    "name": "Palworld",
+    "release_date": "2024-01-19 (Early Access)",
+    "size": "40 GB",
+    "average_playtime": "50-100 hours",
+    "genre": "Survival, Open World, Creature Collection",
+    "description": "A unique blend of survival mechanics and Pokémon-like creature collection, allowing players to battle, build, and explore a dangerous yet whimsical world.",
+    "price": "€39.99",
+    "image": "../Images/shopimages/Palworld.jpg"
+  }
+]

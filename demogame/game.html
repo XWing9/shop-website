@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="game.css">
+    <title>Gamedemo</title>
+    <link rel="icon" type="image/x-icon" href="/Images/faviconimage.jpg">
+</head>
+
+<body>
+    <div class="grid-item" id="Headline">
+       <h1>Welcome to the Game!</h1>
+    </div>
+    <div id="canvas">
+        <canvas id="gameCanvas"></canvas>
+        <div class="canvasoptions">
+            <h2>Game Options</h2>
+            <button class="gameButton" id="saveGame">Save game</button>
+            <button class="gameButton" id="loadGame">Load game</button>
+            <div>
+                <p></p>
+                <button class="gameButton" id="RegenerateMap"> Regenerate Map</button>
+            </div>
+
+            <div id="chatBox">
+                <div id="chatMessages"></div>
+            </div>
+            <div id="homebutton">
+                <a href="../Main.html" class="gameButton">home</a>
+            </div>
+        </div>
+    </div>
+    <div id="toolbar">
+        <div class="object" data-type="Miner"> Miner</div>
+        <div class="object" data-type="ConveyorBelt"> ConveyorBelt</div>
+        <div class="object" data-type="Factory"> Factory</div>
+    </div>
+    <script type="module" src="gamelogic.js"></script>
+</body>
+
+<!--
+todo list:
+    make it possible to have the mpa fullscreen and an extra menu the can be clapped open
+    make it so i can atually save and load the map/ game files
+    make the ACTUALL logic so the miners mine factory produce etc...
+    make a quick goal to what is needed to be produced
+-->

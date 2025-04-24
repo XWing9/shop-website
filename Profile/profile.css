@@ -1,0 +1,139 @@
+body {
+    background-color: black;      
+    margin: 0;
+}
+#headerran{
+    color: white;
+    text-align: left;
+    margin: 0px 0px 0px 2vw;
+}
+.Profilemainbody {
+    display: flex;
+    background-color: gray;
+    justify-content: center;    
+    width: 70vw;
+    height: 90vh;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.Profilesection::before{
+    content: none;
+}
+.profileblock{
+    align-self: left;
+    width: 70vw;
+}
+.profileHeader{
+    display: flex;
+    margin: 1vw;
+}
+.profileData{
+    margin: 2vw;
+}
+#ProfilePicture {
+    max-width: 20%!important;
+    border-radius: 15px;
+}
+
+.profileInfo{
+    align-content: right;
+    width: 25vw;
+    margin: 0vw; 
+    background-color: lightblue;
+    border-radius: 15px 10px 10px 15px;
+    padding: 0px;
+}
+.innerProfileInfo{
+    padding: 15px;
+}
+.profileslider {
+    width: 0vw;
+    max-width: 5vw;
+    background-color: rgb(22, 22, 22);
+    transition: min-width 0.3s;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-top: 20vh;
+    margin: 10px 5px 10px 10px;
+}
+.RecentGames{
+    margin: 20px;
+    display: flex;
+}
+#titleRecentGames{
+    font-size: 150%;
+    font-weight: bold;
+}
+.profileSideBar {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+.profileSideBar li {
+    display: flex;
+    margin-bottom: 3vh;
+}
+.profileSideBar a{
+    padding: 0;
+}
+.profileSideBar a:hover{
+    all: unset;
+}
+.profileSideBar li img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.icon-button {
+    border: none;
+}
+.sidebarArrow{
+    
+    font-size: 120%;
+    border: none;
+    width: 2vw;
+    background-color: gray;
+}
+.arrowicon{
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+.sidebarArrow.rotate{
+    transform: rotate(180deg);
+}
+span{
+    all: unset !important;
+}
+.Button{
+    padding: 10px !important;
+    font-size: 100% !important;
+}
+.game-image{
+    width: 5vw;
+}
+.friendsMainblock{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+.friendrequests,
+.otherusers {
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    width: 50%;
+    box-sizing: border-box;
+}
+.innersettingsinfo{
+    padding: 10px;
+}
+.innerfriendsinfo{
+    padding: 10px;
+    text-align: center;
+}
+.friendsinfoheader{
+    padding-bottom: 10px;
+    font-size: 130% !important;
+}

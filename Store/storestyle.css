@@ -1,0 +1,72 @@
+.header{
+    text-align: center;
+}
+.shopcontainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+.gamecard{
+    display: flex;
+    margin: 2vw;
+    width: 70vw;
+    align-self: stretch;
+    background-color: red;
+    border-radius: 10px;
+    transition: transform 1s ease;
+}
+.gameimage{
+    max-width: 10vw;
+    border-radius: 10px;
+    height: 100%;            
+}
+.gameinfo{
+    margin: 10px;
+}
+.shopsidebar{
+    display: flex;
+    width: 30vw;
+    margin: 1vw;
+    padding: 10px;
+    align-self: right;
+    background-color: red;
+}
+.gamecard:hover {
+    transform: scale(1.05);
+}
+#gamebuying{
+    font-size: small;
+    padding: 5px;
+    margin: 0px 7px 0px 15px;
+}
+#moreGameInfo{
+    padding: 5px;
+    margin: 0px 7px 0px 15px;
+}
+.GameTitel{
+    margin: 5px;
+}
+.statetext{
+    margin-left: 10px;
+}
+.moreinfobutton{
+    background-color: red;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 100%;
+    transition: all 0.3s ease;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.moreinfobutton.open .arrow {
+    transform: rotate(180deg);
+}
+.extraGameInfo{
+    text-align: right;
+}

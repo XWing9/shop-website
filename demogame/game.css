@@ -1,0 +1,84 @@
+body{
+    font-family: 'Quicksand',sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+#Headline{
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    border-bottom: solid white;
+}
+/*css for the canvas*/
+#gameCanvas{
+    border: none;
+    background-color: white;
+}
+#canvas{
+    display: flex;
+}
+.canvasoptions{
+    padding-top: 40px;
+    text-align: center;
+}
+#chatBox {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    display: inline-flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#chatMessages {
+    line-height: 1.5;
+    text-align: right;
+    padding-right: 15px;
+}
+/*css for the buttons*/
+.gameButton{
+    border-radius: 5px;
+  font-weight: bold;
+  font-size: 120%;
+  font-family: 'Quicksand', sans-serif;
+  padding: 15px 35px 15px 35px;
+  color: black;
+  background-color: #00ff00;
+  border: none;
+  box-shadow: 0 0 15px 2px rgba(0, 255, 10, 0.8);
+}
+.gameButton:hover{
+    background-color: rgb(34, 55, 4);
+}
+#homebutton{
+    padding-top: 20px;
+}
+
+/*css for the object toolbar*/
+#toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+    background-color: black;
+}
+.object {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 5px 2px rgba(0, 255, 10, 0.8);
+    user-select: none;
+    text-align: center;
+}
+.object:hover {
+    background-color: #ccc;
+}
+/*error messages styling*/
+.error-message{
+    color: red;
+}

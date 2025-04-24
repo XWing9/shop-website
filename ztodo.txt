@@ -1,0 +1,6 @@
+1. Finish Profile
+        styling and some rest functions
+        maybe a chance to change profile image
+2. (News Page) get ideas for news page
+3. styling of library,profile,shop
+4. finish demo game 1

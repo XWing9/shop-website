@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body{
+  font-family: 'Quicksand',sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  width: fit-content;
+}
+h4{
+  font-weight: bold;
+  width: 110%;
+}
+h3{
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.top-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: thin solid white;
+  font-weight: bold;
+}
+#login {
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  color: greenyellow;
+  font-weight: bold;
+  margin: 15px;
+}
+.options,li{
+  float: left;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  font-size: 120%;
+}
+li a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(134, 197, 38);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media (max-width: 600px){
+  .top-nav{
+    flex-direction: column;
+  }
+}
+
+.main{
+  display: grid;
+  grid-row: auto;
+}
+.Mainheaders{
+  font-weight: bold;
+  font-size: 170%;
+}
+
+#Welcome {
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+  flex: 35%;
+  margin: 30px;
+}
+.Welcomeblock {
+  display: flex;
+}
+#Welcomebuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#Welcomeimage {
+  display: flex;
+  flex: 65%;
+  min-height: 200px;
+  justify-content: center;
+  position: relative;
+  pointer-events: none;
+}
+#Welcomeimage::before {
+  content: '';
+  position: absolute;
+  top: 50%;  /* Center the circle vertically */
+  left: 50%;  /* Center the circle horizontally */
+  width: 8vw;  /* Circle size */
+  height: 8vw;  /* Circle size */
+  border-radius: 50%;
+  background-color: rgba(20, 153, 2, 0.4);
+  transform: translate(-50%, -50%); 
+  box-shadow: 0px 40px 15vw 10vw rgba(20, 153, 2, 0.562);
+  z-index: -1;
+  pointer-events: none;
+}
+@media (max-width: 850px) {
+  .Welcomeblock {
+    flex-direction: column;
+    flex: 100%;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  #Welcome {
+    width: fit-content;
+    margin-top: 0;
+  }
+}
+
+#block1{
+  padding: 50px 50px 50px 50px;
+  float: left;
+  flex-direction: row;
+  display: flex;
+}
+.Productcard{
+  display: flex;
+  background-color: rgb(20, 20, 20);
+  margin: 20px;
+  min-width: 70%;
+  max-width: 70%;
+  min-height: 250px;
+  max-height: 300px;
+}
+.Productcard img{
+  width: 50%;
+  padding: 10px 10px 10px 10px;
+}
+.Productcardtext{
+  width: 50%;
+  justify-self: right;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0px 10px 10px 0px;
+  font-size: 90%;
+  line-height: 2;
+}
+.Products{
+  display: flex;
+  flex-direction: column;
+}
+.Productlists{
+  display: flex;
+  overflow: hidden;
+}
+.prodheads{
+  margin-bottom: 15px!important;
+}
+@media(max-width: 750px){
+  h3{
+    font-size: 100%;
+  }
+  #block1{
+    padding-left: 0px;
+  }
+  @media(max-width: 500px){
+    .Productcard{
+      width: fit-content;
+      overflow: scroll;
+      overflow: hidden;
+      width: 300px;
+    }
+  }
+}
+
+#block2{
+  margin: 30px 0px 30px 0px;
+  text-align: center;
+  place-items: center;
+  min-height: 40vh;
+}
+.slide img{
+  width: 300px;
+  transition: transform 1s;
+}
+.slide img:hover{
+  transform: translateZ(15px);
+}
+.slider{
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  position: relative;
+  display: flex;
+  place-items: left;
+  flex-direction: column;
+  overflow: hidden;
+}
+.slide{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+.slide-track{
+  display: flex;
+  animation: scroll 20s linear infinite;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+.slide-track2{
+  display: flex;
+  animation: scroll2 20s linear infinite;
+}
+@keyframes scroll{
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(-80%);
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media(max-width: 800px){
+  #PopulargamesImages{
+    display: none;
+  }
+  #PopulargamesImages2{
+    display: none;
+  }
+}
+
+#block3 {
+  display: flex;
+  align-items: stretch;
+  justify-content: start;
+  margin: 2vw 5vw 5vw 5vw;
+}
+.Topproduct {
+  position: relative;       
+  width: max-content;       
+  margin: 0 auto;
+  margin-bottom: 5vw;           
+}
+.Topproduct img {
+  display: block;         
+  max-width: 100%;         
+}
+.Topproduct .base {
+  position: relative;
+  z-index: 1;
+}
+.Topproduct .overlay {
+  position: absolute;
+  top: 9vw;                /* tweak this for vertical overlap */
+  left: 11vw;               /* tweak for horizontal overlap */
+  z-index: 2;
+}
+.Topproducttext {
+  align-items: center;
+  width: 50%;
+  justify-content: right;
+  text-align: center;
+}
+#topproductbottom {
+  width: 70%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+#topproducttop {
+  width: 70%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  transform: translateX(20%); /* Shift slightly left */
+  border-left: 15px solid black;
+  border-top: 15px solid black;
+}
+#Playdemobutton{
+  margin-left: 20px;
+}
+
+.Button{
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 120%;
+  font-family: 'Quicksand', sans-serif;
+  padding: 15px 35px 15px 35px;
+  color: black;
+  background-color: #00ff00;
+  border: none;
+  box-shadow: 0 0 15px 2px rgba(0, 255, 10, 0.8);
+}
+.Button:hover{
+  background-color: green;
+}
+.Button2{
+  border-radius: 5px;
+  background-color: black;
+  color: #00ff00;
+  border: thin solid #00ff00;
+  font-size: 120%;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  padding: 15px 35px 15px 35px;
+}
+.Button2:hover{
+  background-color: rgb(34, 55, 4);
+}
+
+.footer{
+  background-image: url(Images/footerimage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  border-top: thin solid white;
+  display: flex;
+  flex-direction: row;
+}
+.footeritems{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.icons{
+  flex-direction: column;
+  width: 50%;
+  margin: 20px 0px 0px 20px;
+}
+.Company ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+.Help ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+.Resources ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
