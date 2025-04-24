@@ -1,18 +1,19 @@
 .header{
     text-align: center;
+    font-size: 150%;
 }
 .shopcontainer {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
-  }
+}
 .gamecard{
     display: flex;
     margin: 2vw;
     width: 70vw;
     align-self: stretch;
-    background-color: red;
+    background-color: rgb(53, 53, 53);
     border-radius: 10px;
     transition: transform 1s ease;
 }
@@ -30,7 +31,7 @@
     margin: 1vw;
     padding: 10px;
     align-self: right;
-    background-color: red;
+    background-color: rgb(53, 53, 53);
 }
 .gamecard:hover {
     transform: scale(1.05);
@@ -51,7 +52,7 @@
     margin-left: 10px;
 }
 .moreinfobutton{
-    background-color: red;
+    background-color: rgb(53, 53, 53);
     border: none;
     font-weight: bold;
     color: white;
