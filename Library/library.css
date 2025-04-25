@@ -1,12 +1,19 @@
+.libraryheader{
+    padding: 3vw;
+}
 .cardImage{
     max-width: 10vw;
+}
+.gametitle{
+    padding: 10px;
 }
 .gameCard{
     display: flex;
     margin: 2vw;
     width: 70vw;
     align-self: stretch;
-    background-color: red;
+    justify-content: space-between;
+    background-color: grey;
     border-radius: 10px;
     transition: transform 1s ease;
 }

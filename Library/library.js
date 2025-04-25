@@ -41,7 +41,7 @@ function generateMainBodyHtml(userData){
         return `
             <div class="gameCard">
                 
-                <h5>${gameName}</h5>
+                <h5 class="gametitle">${gameName}</h5>
             </div>
         `;
     }).join("");
