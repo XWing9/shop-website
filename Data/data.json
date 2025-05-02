@@ -17,7 +17,11 @@
         "Starfield"
       ],
       "friends": [
-        "anotherUser"
+        "anotherUser",
+        "wagunda"
+      ],
+      "friendrequests": [
+        "piepo"
       ]
     },
     {
@@ -29,7 +33,80 @@
         "Satisfactory"
       ],
       "Wishlist": [],
-      "friends": []
+      "friends": [],
+      "friendrequests": []
+    },
+    {
+      "username": "wagunda",
+      "password": "1",
+      "id": 2,
+      "currency": 0,
+      "ownedGames": [
+        "Satisfactory"
+      ],
+      "Wishlist": [],
+      "friends": [],
+      "friendrequests": []
+    },
+    {
+      "username": "piepo",
+      "password": "1",
+      "id": 2,
+      "currency": 0,
+      "ownedGames": [
+        "Satisfactory"
+      ],
+      "Wishlist": [],
+      "friends": [],
+      "friendrequests": []
+    },
+    {
+      "username": "maximilian",
+      "password": "1",
+      "id": 2,
+      "currency": 0,
+      "ownedGames": [
+        "Satisfactory"
+      ],
+      "Wishlist": [],
+      "friends": [],
+      "friendrequests": []
+    },
+    {
+      "username": "mulo",
+      "password": "1",
+      "id": 2,
+      "currency": 0,
+      "ownedGames": [
+        "Satisfactory"
+      ],
+      "Wishlist": [],
+      "friends": [],
+      "friendrequests": []
+    },
+    {
+      "username": "womp womp",
+      "password": "1",
+      "id": 2,
+      "currency": 0,
+      "ownedGames": [
+        "Satisfactory"
+      ],
+      "Wishlist": [],
+      "friends": [],
+      "friendrequests": []
+    },
+    {
+      "username": "pizze",
+      "password": "1",
+      "id": 2,
+      "currency": 0,
+      "ownedGames": [
+        "Satisfactory"
+      ],
+      "Wishlist": [],
+      "friends": [],
+      "friendrequests": []
     }
   ]
 }

@@ -109,24 +109,47 @@ app.post("/update-currency", (req, res) => {
 
     res.json({ message: "Currency updated!", newCurrency: user.currency });
 });
+
 app.get("/getallusers", (req, res) => {
-    // Adjust the path if needed
+    const filePath = path.join(__dirname, "../Data/data.json");
+  
+    try {
+      const raw = fs.readFileSync(filePath, "utf8");
+      const { users } = JSON.parse(raw);
+  
+      // send back only usernames
+      const usernames = users.map(u => u.username);
+      return res.json({ usernames });
+  
+    } catch (err) {
+      console.error("Error reading JSON file:", err);
+      res.status(500).json({ error: "Error reading JSON file" });
+    }
+  });
+  
+app.post("/friendrequest", (req, res) => {
+    const {toAdd,userId} = req.body;
+
     const filePath = path.join(__dirname, "../Data/data.json");
 
+    // Read the JSON file
+    let jsonData;
     try {
-        // Read the JSON file as a string
-        const rawData = fs.readFileSync(filePath, "utf8");
-
-        // Parse the JSON string into an array
-        const jsonData = JSON.parse(rawData);
-
-        res.json(jsonData);
-
+        jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
     } catch (err) {
-        console.error("Error reading JSON file:", err);
-        res.status(500).json({ error: "Error reading JSON file" });
+        return res.status(500).json({ error: "Error reading JSON file" });
     }
-});
+
+    const user = jsonData.users.find(user => user.id === userId);
+    if (!user) {
+        return res.status(404).json({ error: "User not found" });
+    }
+
+    user.friendrequests.push(toAdd)
+
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+    res.json({ message: "Succesfully adda friend: ", toAdd})
+})
 
 app.post("/get-user-data", (req, res) => {
     const { userId } = req.body;

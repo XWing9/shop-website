@@ -1,8 +1,8 @@
 let userData = null;
+const userId = parseInt(localStorage.getItem("userId"))
 
 window.onload = async function() {
     // Get user ID from localStorage
-    const userId = parseInt(localStorage.getItem("userId"))
 
     if (!userId) {
         // Redirect to login page if no user ID is found
@@ -116,22 +116,59 @@ function loadWischlist(wishlist) {
     });
 }
 
-async function generateFriends(userData){
-    const friendslist = document.getElementById("friendslist")
-    friendslist.innerHTML = ""
-    userData.friends.forEach(name =>{
-        friendslist.innerHTML += `
+async function generateFriends(userData) {
+    const friendslist = document.getElementById("friendslist");
+    friendslist.innerHTML = userData.friends.map(name => `
+        <li>${name}</li>`)
+    .join("");
+  
+    try {
+      const response = await fetch("/getallusers");
+      if (!response.ok) throw new Error(response.statusText);
+  
+      const { usernames } = await response.json();
+  
+      const available = usernames.filter(name =>
+        name !== userData.username &&
+        !userData.friends.includes(name)
+      );
+      
+      console.log("users: ", available)
+      const otherusersbody = document.getElementById("otherusersbodyid");
+      otherusersbody.innerHTML = available.map(name => `
+          <div class="otherusersdiv">
             ${name}
-        `
-    })
+            <button data-username="${name}" class="Button" id="sendfriendrequest">Add</button>
+          </div>
+        `)
+        .join("");
+  
+      document.querySelectorAll("#sendfriendrequest").forEach(btn =>
+        btn.addEventListener("click", e => {
+          const toAdd = e.target.dataset.username;
+          console.log("friend added:", toAdd)
+          pendingFriendRequest(toAdd)
+        })
+      );
+  
+    } catch (err) {
+      console.error("Failed to load usernames:", err);
+    }
+}  
 
-    const currentfriendsrequests = document.getElementById("friendrequestsbody")
-    currentfriendsrequests.innerHTML = ""
-    //adden von pendelden user requests
+async function pendingFriendRequest(toAdd){
+    try{
+        const pendingFriendRequest = await fetch("/friendrequest",{
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ toAdd, userId })
+        })
 
-    const otherusers = document.getElementById("otherusersbody")
-    otherusers.innerHTML = ""
-    //fetch um alle user zu holen und zu displayen mit basic info dazu
+        console.log("succesfully added friend")
+      }catch(error){
+
+      }
+      //delete div with respective username
 }
 
 function generateSettings(userData){
