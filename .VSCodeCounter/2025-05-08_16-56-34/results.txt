@@ -1,0 +1,75 @@
+Date : 2025-05-08 16:56:34
+Directory : c:\Users\henri.haege\repos\shop-website
+Total : 37 files,  4407 codes, 87 comments, 325 blanks, all 4819 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          5 |      1,262 |          0 |          5 |      1,267 |
+| JavaScript |         12 |      1,123 |         67 |        270 |      1,460 |
+| CSS        |          8 |      1,052 |          4 |         23 |      1,079 |
+| HTML       |          9 |        937 |         16 |         27 |        980 |
+| XML        |          3 |         33 |          0 |          0 |         33 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                         | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                            |         37 |      4,407 |         87 |        325 |      4,819 |
+| . (Files)                                                                    |         11 |      2,468 |          6 |         56 |      2,530 |
+| .idea                                                                        |          3 |         33 |          0 |          0 |         33 |
+| Data                                                                         |          3 |        347 |          0 |          3 |        350 |
+| Library                                                                      |          3 |         77 |          1 |          9 |         87 |
+| News                                                                         |          1 |          0 |          0 |          1 |          1 |
+| Profile                                                                      |          3 |        478 |         15 |         70 |        563 |
+| Store                                                                        |          3 |        263 |          5 |         45 |        313 |
+| Wishlist                                                                     |          3 |         70 |          1 |          9 |         80 |
+| backend                                                                      |          1 |        221 |         30 |         62 |        313 |
+| demogame                                                                     |          6 |        450 |         29 |         70 |        549 |
++------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                     | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\henri.haege\repos\shop-website\.idea\Responsive Web javascript.iml  | XML        |         12 |          0 |          0 |         12 |
+| c:\Users\henri.haege\repos\shop-website\.idea\material_theme_project_new.xml | XML        |         13 |          0 |          0 |         13 |
+| c:\Users\henri.haege\repos\shop-website\.idea\modules.xml                    | XML        |          8 |          0 |          0 |          8 |
+| c:\Users\henri.haege\repos\shop-website\Data\data.json                       | JSON       |        134 |          0 |          0 |        134 |
+| c:\Users\henri.haege\repos\shop-website\Data\gamecatalog.json                | JSON       |        202 |          0 |          0 |        202 |
+| c:\Users\henri.haege\repos\shop-website\Data\mapdata.json                    | JSON       |         11 |          0 |          3 |         14 |
+| c:\Users\henri.haege\repos\shop-website\Library\library.css                  | CSS        |         19 |          0 |          0 |         19 |
+| c:\Users\henri.haege\repos\shop-website\Library\library.html                 | HTML       |         19 |          0 |          1 |         20 |
+| c:\Users\henri.haege\repos\shop-website\Library\library.js                   | JavaScript |         39 |          1 |          8 |         48 |
+| c:\Users\henri.haege\repos\shop-website\Main.html                            | HTML       |        153 |          1 |          1 |        155 |
+| c:\Users\henri.haege\repos\shop-website\News\news.html                       | HTML       |          0 |          0 |          1 |          1 |
+| c:\Users\henri.haege\repos\shop-website\Profile\Profile.html                 | HTML       |         95 |          8 |         11 |        114 |
+| c:\Users\henri.haege\repos\shop-website\Profile\profile.css                  | CSS        |        175 |          0 |          4 |        179 |
+| c:\Users\henri.haege\repos\shop-website\Profile\profilelogic.js              | JavaScript |        208 |          7 |         55 |        270 |
+| c:\Users\henri.haege\repos\shop-website\Store\store.html                     | HTML       |         23 |          0 |          4 |         27 |
+| c:\Users\henri.haege\repos\shop-website\Store\storelogic.js                  | JavaScript |        168 |          5 |         39 |        212 |
+| c:\Users\henri.haege\repos\shop-website\Store\storestyle.css                 | CSS        |         72 |          0 |          2 |         74 |
+| c:\Users\henri.haege\repos\shop-website\Wishlist\wischlist.css               | CSS        |         12 |          0 |          0 |         12 |
+| c:\Users\henri.haege\repos\shop-website\Wishlist\wischlist.html              | HTML       |         19 |          0 |          1 |         20 |
+| c:\Users\henri.haege\repos\shop-website\Wishlist\wischlist.js                | JavaScript |         39 |          1 |          8 |         48 |
+| c:\Users\henri.haege\repos\shop-website\backend\server.js                    | JavaScript |        221 |         30 |         62 |        313 |
+| c:\Users\henri.haege\repos\shop-website\demogame\game.css                    | CSS        |         78 |          4 |          2 |         84 |
+| c:\Users\henri.haege\repos\shop-website\demogame\game.html                   | HTML       |         34 |          7 |          3 |         44 |
+| c:\Users\henri.haege\repos\shop-website\demogame\gamelogic.js                | JavaScript |        108 |          3 |         27 |        138 |
+| c:\Users\henri.haege\repos\shop-website\demogame\mapgeneration.js            | JavaScript |        148 |         13 |         25 |        186 |
+| c:\Users\henri.haege\repos\shop-website\demogame\objectdata.js               | JavaScript |         33 |          0 |          4 |         37 |
+| c:\Users\henri.haege\repos\shop-website\demogame\objectlogic.js              | JavaScript |         49 |          2 |          9 |         60 |
+| c:\Users\henri.haege\repos\shop-website\logic.js                             | JavaScript |         67 |          4 |         21 |         92 |
+| c:\Users\henri.haege\repos\shop-website\login.html                           | HTML       |        298 |          0 |          2 |        300 |
+| c:\Users\henri.haege\repos\shop-website\loginlogic.js                        | JavaScript |         43 |          1 |         11 |         55 |
+| c:\Users\henri.haege\repos\shop-website\loginstyles.css                      | CSS        |        157 |          0 |          4 |        161 |
+| c:\Users\henri.haege\repos\shop-website\package-lock.json                    | JSON       |        899 |          0 |          1 |        900 |
+| c:\Users\henri.haege\repos\shop-website\package.json                         | JSON       |         16 |          0 |          1 |         17 |
+| c:\Users\henri.haege\repos\shop-website\signup.css                           | CSS        |        180 |          0 |          2 |        182 |
+| c:\Users\henri.haege\repos\shop-website\signup.html                          | HTML       |        296 |          0 |          3 |        299 |
+| c:\Users\henri.haege\repos\shop-website\signup.js                            | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\henri.haege\repos\shop-website\style.css                            | CSS        |        359 |          0 |          9 |        368 |
+| Total                                                                        |            |      4,407 |         87 |        325 |      4,819 |
++------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

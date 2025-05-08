@@ -1,35 +1,35 @@
 # Summary
 
-Date : 2025-04-20 17:31:29
+Date : 2025-05-08 16:56:34
 
-Directory d:\\programmieren\\Websites\\Responsive Web javascript
+Directory c:\\Users\\henri.haege\\repos\\shop-website
 
-Total : 37 files,  4104 codes, 100 comments, 296 blanks, all 4500 lines
+Total : 37 files,  4407 codes, 87 comments, 325 blanks, all 4819 lines
 
 Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
 ## Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| JSON | 5 | 1,160 | 0 | 5 | 1,165 |
-| CSS | 8 | 1,004 | 4 | 22 | 1,030 |
-| JavaScript | 12 | 968 | 79 | 244 | 1,291 |
-| HTML | 9 | 939 | 17 | 25 | 981 |
+| JSON | 5 | 1,262 | 0 | 5 | 1,267 |
+| JavaScript | 12 | 1,123 | 67 | 270 | 1,460 |
+| CSS | 8 | 1,052 | 4 | 23 | 1,079 |
+| HTML | 9 | 937 | 16 | 27 | 980 |
 | XML | 3 | 33 | 0 | 0 | 33 |
 
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 37 | 4,104 | 100 | 296 | 4,500 |
+| . | 37 | 4,407 | 87 | 325 | 4,819 |
 | . (Files) | 11 | 2,468 | 6 | 56 | 2,530 |
 | .idea | 3 | 33 | 0 | 0 | 33 |
-| Data | 3 | 245 | 0 | 3 | 248 |
-| Library | 3 | 70 | 1 | 9 | 80 |
+| Data | 3 | 347 | 0 | 3 | 350 |
+| Library | 3 | 77 | 1 | 9 | 87 |
 | News | 1 | 0 | 0 | 1 | 1 |
-| Profile | 3 | 373 | 16 | 51 | 440 |
-| Store | 3 | 263 | 5 | 44 | 312 |
+| Profile | 3 | 478 | 15 | 70 | 563 |
+| Store | 3 | 263 | 5 | 45 | 313 |
 | Wishlist | 3 | 70 | 1 | 9 | 80 |
-| backend | 1 | 170 | 29 | 46 | 245 |
-| demogame | 6 | 412 | 42 | 77 | 531 |
+| backend | 1 | 221 | 30 | 62 | 313 |
+| demogame | 6 | 450 | 29 | 70 | 549 |
 
 Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-details.md)

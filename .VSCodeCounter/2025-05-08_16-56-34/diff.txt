@@ -1,0 +1,126 @@
+Date : 2025-05-08 16:56:34
+Directory : c:\Users\henri.haege\repos\shop-website
+Total : 74 files,  303 codes, -13 comments, 29 blanks, all 319 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         24 |        155 |        -12 |         26 |        169 |
+| JSON       |         10 |        102 |          0 |          0 |        102 |
+| CSS        |         16 |         48 |          0 |          1 |         49 |
+| XML        |          6 |          0 |          0 |          0 |          0 |
+| HTML       |         18 |         -2 |         -1 |          2 |         -1 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                        |         37 |      4,407 |         87 |        325 |      4,819 |
+| . (Files)                                                                                |         11 |      2,468 |          6 |         56 |      2,530 |
+| .idea                                                                                    |          3 |         33 |          0 |          0 |         33 |
+| Data                                                                                     |          3 |        347 |          0 |          3 |        350 |
+| Library                                                                                  |          3 |         77 |          1 |          9 |         87 |
+| News                                                                                     |          1 |          0 |          0 |          1 |          1 |
+| Profile                                                                                  |          3 |        478 |         15 |         70 |        563 |
+| Store                                                                                    |          3 |        263 |          5 |         45 |        313 |
+| Wishlist                                                                                 |          3 |         70 |          1 |          9 |         80 |
+| backend                                                                                  |          1 |        221 |         30 |         62 |        313 |
+| d:\                                                                                      |         37 |     -4,104 |       -100 |       -296 |     -4,500 |
+| d:\programmieren                                                                         |         37 |     -4,104 |       -100 |       -296 |     -4,500 |
+| d:\programmieren\Websites                                                                |         37 |     -4,104 |       -100 |       -296 |     -4,500 |
+| d:\programmieren\Websites\Responsive Web javascript                                      |         37 |     -4,104 |       -100 |       -296 |     -4,500 |
+| d:\programmieren\Websites\Responsive Web javascript (Files)                              |         11 |     -2,468 |         -6 |        -56 |     -2,530 |
+| d:\programmieren\Websites\Responsive Web javascript\.idea                                |          3 |        -33 |          0 |          0 |        -33 |
+| d:\programmieren\Websites\Responsive Web javascript\Data                                 |          3 |       -245 |          0 |         -3 |       -248 |
+| d:\programmieren\Websites\Responsive Web javascript\Library                              |          3 |        -70 |         -1 |         -9 |        -80 |
+| d:\programmieren\Websites\Responsive Web javascript\News                                 |          1 |          0 |          0 |         -1 |         -1 |
+| d:\programmieren\Websites\Responsive Web javascript\Profile                              |          3 |       -373 |        -16 |        -51 |       -440 |
+| d:\programmieren\Websites\Responsive Web javascript\Store                                |          3 |       -263 |         -5 |        -44 |       -312 |
+| d:\programmieren\Websites\Responsive Web javascript\Wishlist                             |          3 |        -70 |         -1 |         -9 |        -80 |
+| d:\programmieren\Websites\Responsive Web javascript\backend                              |          1 |       -170 |        -29 |        -46 |       -245 |
+| d:\programmieren\Websites\Responsive Web javascript\demogame                             |          6 |       -412 |        -42 |        -77 |       -531 |
+| demogame                                                                                 |          6 |        450 |         29 |         70 |        549 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                 | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\henri.haege\repos\shop-website\.idea\Responsive Web javascript.iml              | XML        |         12 |          0 |          0 |         12 |
+| c:\Users\henri.haege\repos\shop-website\.idea\material_theme_project_new.xml             | XML        |         13 |          0 |          0 |         13 |
+| c:\Users\henri.haege\repos\shop-website\.idea\modules.xml                                | XML        |          8 |          0 |          0 |          8 |
+| c:\Users\henri.haege\repos\shop-website\Data\data.json                                   | JSON       |        134 |          0 |          0 |        134 |
+| c:\Users\henri.haege\repos\shop-website\Data\gamecatalog.json                            | JSON       |        202 |          0 |          0 |        202 |
+| c:\Users\henri.haege\repos\shop-website\Data\mapdata.json                                | JSON       |         11 |          0 |          3 |         14 |
+| c:\Users\henri.haege\repos\shop-website\Library\library.css                              | CSS        |         19 |          0 |          0 |         19 |
+| c:\Users\henri.haege\repos\shop-website\Library\library.html                             | HTML       |         19 |          0 |          1 |         20 |
+| c:\Users\henri.haege\repos\shop-website\Library\library.js                               | JavaScript |         39 |          1 |          8 |         48 |
+| c:\Users\henri.haege\repos\shop-website\Main.html                                        | HTML       |        153 |          1 |          1 |        155 |
+| c:\Users\henri.haege\repos\shop-website\News\news.html                                   | HTML       |          0 |          0 |          1 |          1 |
+| c:\Users\henri.haege\repos\shop-website\Profile\Profile.html                             | HTML       |         95 |          8 |         11 |        114 |
+| c:\Users\henri.haege\repos\shop-website\Profile\profile.css                              | CSS        |        175 |          0 |          4 |        179 |
+| c:\Users\henri.haege\repos\shop-website\Profile\profilelogic.js                          | JavaScript |        208 |          7 |         55 |        270 |
+| c:\Users\henri.haege\repos\shop-website\Store\store.html                                 | HTML       |         23 |          0 |          4 |         27 |
+| c:\Users\henri.haege\repos\shop-website\Store\storelogic.js                              | JavaScript |        168 |          5 |         39 |        212 |
+| c:\Users\henri.haege\repos\shop-website\Store\storestyle.css                             | CSS        |         72 |          0 |          2 |         74 |
+| c:\Users\henri.haege\repos\shop-website\Wishlist\wischlist.css                           | CSS        |         12 |          0 |          0 |         12 |
+| c:\Users\henri.haege\repos\shop-website\Wishlist\wischlist.html                          | HTML       |         19 |          0 |          1 |         20 |
+| c:\Users\henri.haege\repos\shop-website\Wishlist\wischlist.js                            | JavaScript |         39 |          1 |          8 |         48 |
+| c:\Users\henri.haege\repos\shop-website\backend\server.js                                | JavaScript |        221 |         30 |         62 |        313 |
+| c:\Users\henri.haege\repos\shop-website\demogame\game.css                                | CSS        |         78 |          4 |          2 |         84 |
+| c:\Users\henri.haege\repos\shop-website\demogame\game.html                               | HTML       |         34 |          7 |          3 |         44 |
+| c:\Users\henri.haege\repos\shop-website\demogame\gamelogic.js                            | JavaScript |        108 |          3 |         27 |        138 |
+| c:\Users\henri.haege\repos\shop-website\demogame\mapgeneration.js                        | JavaScript |        148 |         13 |         25 |        186 |
+| c:\Users\henri.haege\repos\shop-website\demogame\objectdata.js                           | JavaScript |         33 |          0 |          4 |         37 |
+| c:\Users\henri.haege\repos\shop-website\demogame\objectlogic.js                          | JavaScript |         49 |          2 |          9 |         60 |
+| c:\Users\henri.haege\repos\shop-website\logic.js                                         | JavaScript |         67 |          4 |         21 |         92 |
+| c:\Users\henri.haege\repos\shop-website\login.html                                       | HTML       |        298 |          0 |          2 |        300 |
+| c:\Users\henri.haege\repos\shop-website\loginlogic.js                                    | JavaScript |         43 |          1 |         11 |         55 |
+| c:\Users\henri.haege\repos\shop-website\loginstyles.css                                  | CSS        |        157 |          0 |          4 |        161 |
+| c:\Users\henri.haege\repos\shop-website\package-lock.json                                | JSON       |        899 |          0 |          1 |        900 |
+| c:\Users\henri.haege\repos\shop-website\package.json                                     | JSON       |         16 |          0 |          1 |         17 |
+| c:\Users\henri.haege\repos\shop-website\signup.css                                       | CSS        |        180 |          0 |          2 |        182 |
+| c:\Users\henri.haege\repos\shop-website\signup.html                                      | HTML       |        296 |          0 |          3 |        299 |
+| c:\Users\henri.haege\repos\shop-website\signup.js                                        | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\henri.haege\repos\shop-website\style.css                                        | CSS        |        359 |          0 |          9 |        368 |
+| d:\programmieren\Websites\Responsive Web javascript\.idea\Responsive Web javascript.iml  | XML        |        -12 |          0 |          0 |        -12 |
+| d:\programmieren\Websites\Responsive Web javascript\.idea\material_theme_project_new.xml | XML        |        -13 |          0 |          0 |        -13 |
+| d:\programmieren\Websites\Responsive Web javascript\.idea\modules.xml                    | XML        |         -8 |          0 |          0 |         -8 |
+| d:\programmieren\Websites\Responsive Web javascript\Data\data.json                       | JSON       |        -32 |          0 |          0 |        -32 |
+| d:\programmieren\Websites\Responsive Web javascript\Data\gamecatalog.json                | JSON       |       -202 |          0 |          0 |       -202 |
+| d:\programmieren\Websites\Responsive Web javascript\Data\mapdata.json                    | JSON       |        -11 |          0 |         -3 |        -14 |
+| d:\programmieren\Websites\Responsive Web javascript\Library\library.css                  | CSS        |        -12 |          0 |          0 |        -12 |
+| d:\programmieren\Websites\Responsive Web javascript\Library\library.html                 | HTML       |        -19 |          0 |         -1 |        -20 |
+| d:\programmieren\Websites\Responsive Web javascript\Library\library.js                   | JavaScript |        -39 |         -1 |         -8 |        -48 |
+| d:\programmieren\Websites\Responsive Web javascript\Main.html                            | HTML       |       -153 |         -1 |         -1 |       -155 |
+| d:\programmieren\Websites\Responsive Web javascript\News\news.html                       | HTML       |          0 |          0 |         -1 |         -1 |
+| d:\programmieren\Websites\Responsive Web javascript\Profile\Profile.html                 | HTML       |        -95 |         -9 |        -10 |       -114 |
+| d:\programmieren\Websites\Responsive Web javascript\Profile\profile.css                  | CSS        |       -136 |          0 |         -3 |       -139 |
+| d:\programmieren\Websites\Responsive Web javascript\Profile\profilelogic.js              | JavaScript |       -142 |         -7 |        -38 |       -187 |
+| d:\programmieren\Websites\Responsive Web javascript\Store\store.html                     | HTML       |        -25 |          0 |         -3 |        -28 |
+| d:\programmieren\Websites\Responsive Web javascript\Store\storelogic.js                  | JavaScript |       -168 |         -5 |        -39 |       -212 |
+| d:\programmieren\Websites\Responsive Web javascript\Store\storestyle.css                 | CSS        |        -70 |          0 |         -2 |        -72 |
+| d:\programmieren\Websites\Responsive Web javascript\Wishlist\wischlist.css               | CSS        |        -12 |          0 |          0 |        -12 |
+| d:\programmieren\Websites\Responsive Web javascript\Wishlist\wischlist.html              | HTML       |        -19 |          0 |         -1 |        -20 |
+| d:\programmieren\Websites\Responsive Web javascript\Wishlist\wischlist.js                | JavaScript |        -39 |         -1 |         -8 |        -48 |
+| d:\programmieren\Websites\Responsive Web javascript\backend\server.js                    | JavaScript |       -170 |        -29 |        -46 |       -245 |
+| d:\programmieren\Websites\Responsive Web javascript\demogame\game.css                    | CSS        |        -78 |         -4 |         -2 |        -84 |
+| d:\programmieren\Websites\Responsive Web javascript\demogame\game.html                   | HTML       |        -34 |         -7 |         -3 |        -44 |
+| d:\programmieren\Websites\Responsive Web javascript\demogame\gamelogic.js                | JavaScript |       -109 |        -15 |        -30 |       -154 |
+| d:\programmieren\Websites\Responsive Web javascript\demogame\mapgeneration.js            | JavaScript |       -109 |        -14 |        -29 |       -152 |
+| d:\programmieren\Websites\Responsive Web javascript\demogame\objectdata.js               | JavaScript |        -33 |          0 |         -4 |        -37 |
+| d:\programmieren\Websites\Responsive Web javascript\demogame\objectlogic.js              | JavaScript |        -49 |         -2 |         -9 |        -60 |
+| d:\programmieren\Websites\Responsive Web javascript\logic.js                             | JavaScript |        -67 |         -4 |        -21 |        -92 |
+| d:\programmieren\Websites\Responsive Web javascript\login.html                           | HTML       |       -298 |          0 |         -2 |       -300 |
+| d:\programmieren\Websites\Responsive Web javascript\loginlogic.js                        | JavaScript |        -43 |         -1 |        -11 |        -55 |
+| d:\programmieren\Websites\Responsive Web javascript\loginstyles.css                      | CSS        |       -157 |          0 |         -4 |       -161 |
+| d:\programmieren\Websites\Responsive Web javascript\package-lock.json                    | JSON       |       -899 |          0 |         -1 |       -900 |
+| d:\programmieren\Websites\Responsive Web javascript\package.json                         | JSON       |        -16 |          0 |         -1 |        -17 |
+| d:\programmieren\Websites\Responsive Web javascript\signup.css                           | CSS        |       -180 |          0 |         -2 |       -182 |
+| d:\programmieren\Websites\Responsive Web javascript\signup.html                          | HTML       |       -296 |          0 |         -3 |       -299 |
+| d:\programmieren\Websites\Responsive Web javascript\signup.js                            | JavaScript |          0 |          0 |         -1 |         -1 |
+| d:\programmieren\Websites\Responsive Web javascript\style.css                            | CSS        |       -359 |          0 |         -9 |       -368 |
+| Total                                                                                    |            |        303 |        -13 |         29 |        319 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
