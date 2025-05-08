@@ -18,10 +18,14 @@
       ],
       "friends": [
         "anotherUser",
-        "wagunda"
+        "piepo",
+        "maximilian"
       ],
       "friendrequests": [
-        "piepo"
+        "wagunda"
+      ],
+      "pendingrequests": [
+        "mulo"
       ]
     },
     {
@@ -33,80 +37,98 @@
         "Satisfactory"
       ],
       "Wishlist": [],
-      "friends": [],
-      "friendrequests": []
+      "friends": [
+        "piepo"
+      ],
+      "friendrequests": [],
+      "pendingrequests": []
     },
     {
       "username": "wagunda",
       "password": "1",
-      "id": 2,
+      "id": 3,
       "currency": 0,
       "ownedGames": [
         "Satisfactory"
       ],
       "Wishlist": [],
       "friends": [],
-      "friendrequests": []
+      "friendrequests": [],
+      "pendingrequests": [
+        "dev"
+      ]
     },
     {
       "username": "piepo",
       "password": "1",
-      "id": 2,
+      "id": 4,
       "currency": 0,
       "ownedGames": [
         "Satisfactory"
       ],
       "Wishlist": [],
-      "friends": [],
-      "friendrequests": []
+      "friends": [
+        "dev",
+        "anotherUser"
+      ],
+      "friendrequests": [],
+      "pendingrequests": []
     },
     {
       "username": "maximilian",
       "password": "1",
-      "id": 2,
+      "id": 5,
       "currency": 0,
       "ownedGames": [
         "Satisfactory"
       ],
       "Wishlist": [],
-      "friends": [],
-      "friendrequests": []
+      "friends": [
+        "dev"
+      ],
+      "friendrequests": [],
+      "pendingrequests": []
     },
     {
       "username": "mulo",
       "password": "1",
-      "id": 2,
+      "id": 6,
       "currency": 0,
       "ownedGames": [
         "Satisfactory"
       ],
       "Wishlist": [],
       "friends": [],
-      "friendrequests": []
+      "friendrequests": [
+        "dev"
+      ],
+      "pendingrequests": []
     },
     {
       "username": "womp womp",
       "password": "1",
-      "id": 2,
+      "id": 7,
       "currency": 0,
       "ownedGames": [
         "Satisfactory"
       ],
       "Wishlist": [],
       "friends": [],
-      "friendrequests": []
+      "friendrequests": [],
+      "pendingrequests": []
     },
     {
       "username": "pizze",
       "password": "1",
-      "id": 2,
+      "id": 8,
       "currency": 0,
       "ownedGames": [
         "Satisfactory"
       ],
       "Wishlist": [],
       "friends": [],
-      "friendrequests": []
+      "friendrequests": [],
+      "pendingrequests": []
     }
   ]
 }

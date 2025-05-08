@@ -64,9 +64,8 @@ function generateMainProfile(userData){
     document.getElementById("headerran").textContent = userData.username;
 
     //user info
-    document.getElementById("currentCurency").innerHTML = `Current currency: ${userData.currency}€`;
+    document.getElementById("currentCurency").innerHTML = `<h4>Current currency: <p>${userData.currency}€</p><h4>`;
 
-    document.getElementById("gamescontainer").innerHTML = ""
     loadOwnedGames(userData.ownedGames);
 
     document.getElementById("wischlistcontainer").innerHTML = ""
@@ -117,10 +116,7 @@ function loadWischlist(wishlist) {
 }
 
 async function generateFriends(userData) {
-    const friendslist = document.getElementById("friendslist");
-    friendslist.innerHTML = userData.friends.map(name => `
-        <li>${name}</li>`)
-    .join("");
+    generatefriendlist()
   
     try {
       const response = await fetch("/getallusers");
@@ -128,15 +124,30 @@ async function generateFriends(userData) {
   
       const { usernames } = await response.json();
   
+      console.log(usernames)
+      console.log("requests" ,userData.friendrequests)
+
       const available = usernames.filter(name =>
         name !== userData.username &&
-        !userData.friends.includes(name)
+        !userData.friends.includes(name) &&
+        !userData.friendrequests.includes(name)&&
+        !userData.pendingrequests.includes(name)
       );
       
       console.log("users: ", available)
+
+      const openrequest = document.getElementById("friendrequestsbody")
+      openrequest.innerHTML = userData.friendrequests.map(name => `
+        <div class="openrequestdiv" data-usernamediv="${name}">
+            ${name}
+            <button data-username="${name}" class="Button" id="acceptfriendrequest">Accept</button>
+          </div>
+        `)
+        .join("")
+
       const otherusersbody = document.getElementById("otherusersbodyid");
       otherusersbody.innerHTML = available.map(name => `
-          <div class="otherusersdiv">
+          <div class="otherusersdiv" data-usernamediv="${name}">
             ${name}
             <button data-username="${name}" class="Button" id="sendfriendrequest">Add</button>
           </div>
@@ -147,7 +158,22 @@ async function generateFriends(userData) {
         btn.addEventListener("click", e => {
           const toAdd = e.target.dataset.username;
           console.log("friend added:", toAdd)
+          //eventuall await machen
           pendingFriendRequest(toAdd)
+
+          e.target.closest(".otherusersdiv").remove();
+        })
+      );
+      document.querySelectorAll("#acceptfriendrequest").forEach(btn =>
+        btn.addEventListener("click", e => {
+          const toAdd = e.target.dataset.username;
+          console.log("friend added:", toAdd)
+          //eventuall await machen
+          acceptfriendrequest(toAdd)
+
+          e.target.closest(".openrequestdiv").remove();
+
+          generatefriendlist()
         })
       );
   
@@ -155,6 +181,13 @@ async function generateFriends(userData) {
       console.error("Failed to load usernames:", err);
     }
 }  
+
+function generatefriendlist(){
+    const friendslist = document.getElementById("friendslist");
+    friendslist.innerHTML = userData.friends.map(name => `
+        <li class="friendsliitems">${name}</li>`)
+    .join("");
+}
 
 async function pendingFriendRequest(toAdd){
     try{
@@ -164,11 +197,24 @@ async function pendingFriendRequest(toAdd){
             body: JSON.stringify({ toAdd, userId })
         })
 
-        console.log("succesfully added friend")
+        console.log("succesfully send Friendrequest!")
       }catch(error){
 
       }
-      //delete div with respective username
+}
+
+async function acceptfriendrequest(toAdd){
+    try{
+        const acceptFriendRequest = await fetch("/acceptfriendrequest",{
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ toAdd, userId })
+        })
+
+        console.log("succesfully accepted Friendrequest!")
+      }catch(error){
+
+      }
 }
 
 function generateSettings(userData){

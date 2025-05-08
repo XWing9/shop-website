@@ -145,7 +145,50 @@ app.post("/friendrequest", (req, res) => {
         return res.status(404).json({ error: "User not found" });
     }
 
-    user.friendrequests.push(toAdd)
+    user.pendingrequests.push(toAdd)
+
+    //find user with name and push it into friendrequests
+    const newfriend = jsonData.users.find(user => user.username === toAdd)
+    if (!newfriend) {
+        return res.status(404).json({ error: "User not found" });
+    }
+    newfriend.friendrequests.push(user.username)
+
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+    res.json({ message: "Succesfully adda friend: ", toAdd})
+})
+
+app.post("/acceptfriendrequest", (req, res) => {
+    const {toAdd,userId} = req.body;
+
+    const filePath = path.join(__dirname, "../Data/data.json");
+
+    // Read the JSON file
+    let jsonData;
+    try {
+        jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    } catch (err) {
+        return res.status(500).json({ error: "Error reading JSON file" });
+    }
+
+    const user = jsonData.users.find(user => user.id === userId);
+    if (!user) {
+        return res.status(404).json({ error: "User not found" });
+    }
+
+    user.friendrequests = 
+    user.friendrequests.filter(name => name !== toAdd);
+
+    const sender = jsonData.users.find(user => user.username === toAdd);
+    if (!sender) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    sender.pendingrequests = 
+    sender.pendingrequests.filter(name => name !== user.username);
+  
+    user.friends.push(sender.username);
+    sender.friends.push(user.username);
 
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
     res.json({ message: "Succesfully adda friend: ", toAdd})
@@ -178,7 +221,9 @@ app.post("/get-user-data", (req, res) => {
         userId: user.id,
         ownedGames: user.ownedGames,
         wishlist: user.Wishlist,
-        friends: user.friends
+        friends: user.friends,
+        friendrequests: user.friendrequests,
+        pendingrequests: user.pendingrequests
     });
 });
 

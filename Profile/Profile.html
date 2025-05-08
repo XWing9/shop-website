@@ -40,9 +40,7 @@
                         <h1 id="headerran">Profile Name</h1> 
                     </div>
                     <div class="profileData">
-                        <!-- Warscheinlich auch ne liste im endeffekt -->
-                        <a href="../Main.html">Home</a>
-                        
+                        <a href="../Main.html">Home</a>  
                     </div>
 
                     <div class = "RecentGames">
@@ -57,10 +55,10 @@
                 </div>
                 <div id="friendsProfileBlock" style="display: none;">
                     <div class="friendsMainblock"> 
-                        <div class="friendrequests"> Current friends requests:
+                        <div class="friendrequests"><h3 class="friendsinfoheader">Current friend requests:</h3> 
                             <div id="friendrequestsbody"></div>
                         </div>
-                        <div class="otherusers"> Other users:
+                        <div class="otherusers"> <h3 class="friendsinfoheader">Other users:</h3>
                             <div class="otherusersbody" id="otherusersbodyid"></div>
                         </div>
                     </div>
@@ -73,22 +71,24 @@
                 <div class="innerProfileInfo" id="mainProfileInfo">
                     <div id="currentCurency">
                     </div>
-                    <div>
-                        Games:
-                        <div id="gamescontainer">
-                        </div>
-                    </div>
-                    <div>
-                        Wischlist:
+                    <div class="wishlist">
+                        <h3>Wischlist:</h3>
                         <div id="wischlistcontainer">
                         </div>
                     </div>
-                    <button onclick= "logout()">logout</button>
+                    <div class="logoutbuttondiv">
+                        <button onclick= "logout()" class="Button2">logout</button>
+                    </div>
+                    
                 </div>
                 <div id="friendsProfileInfo" style="display: none;">
                     <div class="innerfriendsinfo">
                         <h3 class="friendsinfoheader">Current Friends:</h3>
-                        <div id="friendslist"></div>
+                        <div id="">
+                            <ul id="friendslist">
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div id="settingsProfileInfo" style="display: none;">
