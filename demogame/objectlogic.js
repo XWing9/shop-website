@@ -1,60 +1,76 @@
-import MapGeneration from "./mapgeneration.js";
+// objectlogic.js
+import MapGeneration from "./mapgeneration.js";  // only if you need helper funcs
 
-export default class ObjectLogic{
-
-    constructor() {
-        this.mapGeneration = new MapGeneration();
+export default class ObjectLogic {
+  static update(obj, mapState) {
+    switch (obj.type) {
+      case "Miner":
+        return ObjectLogic.miner(obj, mapState);
+      case "Factory":
+        return ObjectLogic.factory(obj, mapState);
+      case "ConveyorBelt":
+        return ObjectLogic.conveyorBelt(obj, mapState);
     }
+  }
 
-    processBuildings() {
-        const now = performance.now();
-    
-        for (let col = 0; col < this.mapGeneration.mapState.length; col++) { // check ich ned
-            for (let row = 0; row < this.mapGeneration.mapState[col].length; row++) {
-                const obj = this.mapGeneration.mapState[col][row];
-    
-                if (!obj) continue; //check ich ned
-    
-                // Miner Logic
-                if (obj.type === "Miner" && obj.storage < obj.capacity) {
-                    if (now - obj.lastMinedTime >= 1000) { // Mines every second
-                        obj.storage += obj.speed; 
-                        obj.storage = Math.min(obj.storage, obj.capacity); // Cap at max storage
-                        obj.lastMinedTime = now;
-                    }
-                }
-    
-                // Factory Logic
-                if (obj.type === "Factory") {
-                    const adjacent = this.getAdjacentTiles(col, row);
-    
-                    for (const tile of adjacent) {
-                        if (tile && tile.type === "Miner" && tile.storage > 0) {
-                            if (now - obj.lastProcessedTime >= obj.processSpeed * 1000) {
-                                obj.storage += 1; // Produces 1 output
-                                tile.storage -= 1; // Takes 1 ore from miner
-                                obj.lastProcessedTime = now;
-                            }
-                        }
-                    }
-                }
-            }
+  static miner(miner, mapState) {
+    const now = performance.now();
+    const elapsed = (now - miner.lastMinedTime) / 1000; 
+    const canMine = elapsed * miner.speed;
+    if (canMine >= 1 && miner.storage < miner.capacity) {
+      miner.storage += Math.floor(canMine);
+      miner.lastMinedTime = now;
+    }
+    // Optionally push ore onto an adjacent belt?
+  }
+
+  static factory(factory, mapState) {
+    const now = performance.now();
+    const elapsed = (now - factory.lastProcessedTime) / 1000;
+    const canProcess = elapsed * (factory.processSpeed / 60);
+    if (factory.storage > 0 && canProcess >= 1) {
+      factory.storage--;
+      factory.lastProcessedTime = now;
+      // produce output somewhere…
+    }
+  }
+
+  static conveyorBelt(belt, mapState) {
+    const dirs = [
+      { dx: -1, dy: 0 },
+      { dx:  1, dy: 0 },
+      { dx:  0, dy: -1 },
+      { dx:  0, dy:  1 },
+    ];
+  
+    // — PUSH PHASE first: if buffer > 0, try moving it onward
+    if (belt.storage > 0) {
+      for (let { dx, dy } of dirs) {
+        const dst = mapState[belt.col + dx]?.[belt.row + dy];
+        // accept into factory or another belt’s buffer
+        if (dst && (
+              (dst.type === "Factory") ||
+              (dst.type === "ConveyorBelt" && dst.storage < dst.capacity)
+            )) {
+          // move one item
+          belt.storage--;
+          dst.storage++;
+          break;
         }
+      }
+      // after pushing, we don’t pull this tick
+      return;
     }
-    getAdjacentTiles(col, row) {
-        return [
-            this.mapGeneration.mapState[col - 1]?.[row], // Left
-            this.mapGeneration.mapState[col + 1]?.[row], // Right
-            this.mapGeneration.mapState[col]?.[row - 1], // Up
-            this.mapGeneration.mapState[col]?.[row + 1], // Down
-        ].filter(Boolean);
+  
+    // — PULL PHASE: if buffer empty, try pulling
+    for (let { dx, dy } of dirs) {
+      const src = mapState[belt.col + dx]?.[belt.row + dy];
+      // miner or belt upstream
+      if (src && (src.type === "Miner" || src.type === "ConveyorBelt") && src.storage > 0) {
+        src.storage--;
+        belt.storage++;
+        break;
+      }
     }
-
-    buildingmessagedisyplays(){
-        if (this.mapState[col][row] && this.mapState[col][row].storage !== undefined) {
-            this.ctx.fillStyle = "lightgray";
-            this.ctx.font = "12px Arial";
-            this.ctx.fillText(this.mapState[col][row].storage, x + 5, y + 15);
-        }
-    }
+  }  
 }

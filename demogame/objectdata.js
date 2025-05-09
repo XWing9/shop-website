@@ -15,6 +15,7 @@ export default class ObjectData {
                 return {
                     type: "Factory",
                     storage: 0,
+                    capacity: 10,
                     inputRequired: "ore",
                     output: "processedMaterial",
                     processSpeed: 20 / 1, // 20 items every minute
@@ -26,6 +27,8 @@ export default class ObjectData {
                 return {
                     type: "ConveyorBelt",
                     storage: 0,
+                    capacity: 1,
+                    transportspeed: 10/1,
                     color: "grey",
                 };
 

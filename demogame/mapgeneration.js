@@ -3,7 +3,7 @@ export default class MapGeneration {
         this.canvas = canvas;
         this.ctx = ctx;
         this.optionsPanel = document.querySelector(".canvasoptions");
-        this.mapState = {}; // Use object instead of array for negative indexing
+        this.mapState = {};
 
         this.cameraX = 0;
         this.cameraY = 0;
@@ -15,14 +15,14 @@ export default class MapGeneration {
 
         // Cluster parameters
         this.clusterCenters = [];
-        this.clusterDistance = 25;    // Minimum distance between cluster centers (in cells)
-        this.clusterProbability = 0.02; // Chance to start a cluster when generating each cell
+        this.clusterDistance = 25;    
+        this.clusterProbability = 0.02;
 
         this.minClusterRadius = 3;
         this.maxClusterRadius = 6;
 
         this.adjustCanvasSize();
-        this.generateMap(); // Only called once here
+        this.generateMap();
 
         this.canvas.addEventListener("wheel", (e) => this.handleZoom(e));
         this.canvas.addEventListener("mousedown", (e) => this.startDrag(e));
@@ -41,21 +41,18 @@ export default class MapGeneration {
         this.optionsPanel.style.width = `${window.innerWidth * 0.25}px`;
     }
 
-    // Helper: check if (x,y) is far from existing clusters
     isFarFromClusters(x, y) {
         return this.clusterCenters.every(c => {
             return Math.hypot(c.x - x, c.y - y) >= this.clusterDistance;
         });
     }
 
-    // Generate a round cluster centered at (cx, cy)
     generateCluster(cx, cy) {
-        // 1) pick a random radius each time
+
         const r = Math.floor(
           Math.random() * (this.maxClusterRadius - this.minClusterRadius + 1)
         ) + this.minClusterRadius;
     
-        // 2) fill every cell inside that radius
         for (let dx = -r; dx <= r; dx++) {
             for (let dy = -r; dy <= r; dy++) {
                 if (dx*dx + dy*dy <= r*r) {
@@ -67,35 +64,33 @@ export default class MapGeneration {
             }
         }
     
-        // 3) record for spacing (you could also store radius if needed)
         this.clusterCenters.push({ x: cx, y: cy });
     }
     
     generateMap() {
         this.adjustCanvasSize();
-        this.clusterCenters = []; // reset clusters
+        this.clusterCenters = [];
 
         const visibleCols = Math.ceil(this.canvas.width / this.cellSize);
         const visibleRows = Math.ceil(this.canvas.height / this.cellSize);
         const halfCols = Math.floor(visibleCols / 2);
         const halfRows = Math.floor(visibleRows / 2);
 
-        this.mapState = {}; // Clear map
+        this.mapState = {};
 
         for (let x = -halfCols; x < halfCols; x++) {
             if (!this.mapState[x]) this.mapState[x] = {};
             for (let y = -halfRows; y < halfRows; y++) {
-                // Decide whether to start a cluster here
+                
                 if (Math.random() < this.clusterProbability && this.isFarFromClusters(x, y)) {
                     this.generateCluster(x, y);
                 } else if (this.mapState[x][y] === undefined) {
-                    // Fallback: leave empty
+                    
                     this.mapState[x][y] = null;
                 }
             }
         }
 
-        // Center camera on (0,0)
         this.cameraX = -(this.canvas.width / 2 - this.cellSize / 2);
         this.cameraY = -(this.canvas.height / 2 - this.cellSize / 2);
     }
@@ -105,7 +100,7 @@ export default class MapGeneration {
             if (!this.mapState[x]) this.mapState[x] = {};
             for (let y = minRow; y <= maxRow; y++) {
                 if (this.mapState[x][y] === undefined) {
-                    // Decide whether to start a cluster here
+                    
                     if (Math.random() < this.clusterProbability && this.isFarFromClusters(x, y)) {
                         this.generateCluster(x, y);
                     } else {
@@ -125,18 +120,22 @@ export default class MapGeneration {
                 const cell = this.mapState[x][y];
                 const screenX = x * cellSize - this.cameraX;
                 const screenY = y * cellSize - this.cameraY;
-                // Draw cell background/grid
+                
                 this.ctx.strokeStyle = "#ccc";
                 this.ctx.strokeRect(screenX, screenY, cellSize, cellSize);
-                // Fill nodes
+                
                 if (cell === "node") {
                     this.ctx.fillStyle = "lightyellow";
                     this.ctx.fillRect(screenX, screenY, cellSize, cellSize);
                 }
-                // Fill objects if present
+               
                 else if (cell && cell.type) {
                     this.ctx.fillStyle = cell.color;
                     this.ctx.fillRect(screenX, screenY, cellSize, cellSize);
+
+                    cell.screenX    = screenX;
+                    cell.screenY    = screenY;
+                    cell.screenSize = cellSize;
                 }
             }
         }

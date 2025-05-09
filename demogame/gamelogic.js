@@ -1,89 +1,126 @@
 import ObjectData from './objectdata.js';
-import MapGeneration from './mapgeneration.js'
+import MapGeneration from './mapgeneration.js';
 import ObjectLogic from './objectlogic.js';
 
 class Main {
     selectedObject = null;
-    lastFrameTime = 0;
-    fps = 60;
-    frameDuration = 1000 / this.fps;
+    lastFrameTime  = 0;
+    fps            = 60;
+    frameDuration  = 1000 / this.fps;
 
     constructor() {
+        this.objectsById   = {};
+        this.nextObjectId  = 1;
+
         this.canvas = document.getElementById("gameCanvas");
-        this.ctx = this.canvas.getContext("2d");
+        this.ctx    = this.canvas.getContext("2d");
 
         this.mapGeneration = new MapGeneration(this.canvas, this.ctx);
-        this.mapGeneration.adjustCanvasSize(); // Only resize canvas, no generateMap() here!
-
-        // Start with empty grid — drawGrid will still draw if anything is there
+        this.mapGeneration.adjustCanvasSize();
         this.mapGeneration.drawGrid();
 
-        this.objectPlacement();
         this.toolbar();
         this.buttonInput();
+
+        // Combined click handler: inspect → place → hide
+        this.canvas.addEventListener("click", e => {
+            const rect   = this.canvas.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
+
+            // 1) Inspect existing objects
+            for (let id in this.objectsById) {
+                const obj = this.objectsById[id];
+                if (
+                    clickX >= obj.screenX &&
+                    clickX <= obj.screenX + obj.screenSize &&
+                    clickY >= obj.screenY &&
+                    clickY <= obj.screenY + obj.screenSize
+                ) {
+                    this.showInfoPanel(obj, e.clientX, e.clientY);
+                    return;
+                }
+            }
+
+            // 2) Place new object if one is selected
+            if (this.selectedObject) {
+                const col = Math.floor((clickX + this.mapGeneration.cameraX) / this.mapGeneration.cellSize);
+                const row = Math.floor((clickY + this.mapGeneration.cameraY) / this.mapGeneration.cellSize);
+                this.placeObject(this.selectedObject, col, row);
+                if (!this.shiftHeld) this.selectedObject = null;
+                return;
+            }
+
+            // 3) Otherwise, hide the info panel
+            document.getElementById("infoPanel").style.display = "none";
+        });
+
         this.gameloop();
     }
 
     gameloop(timestamp) {
-        if (timestamp - this.lastFrameTime >= this.frameDuration) {
+        if (!this.lastFrameTime) this.lastFrameTime = timestamp;
+        const deltaMs = timestamp - this.lastFrameTime;
+        if (deltaMs >= this.frameDuration) {
             this.lastFrameTime = timestamp;
-            this.update();
+            this.update(deltaMs);
         }
-        requestAnimationFrame(timestamp => this.gameloop(timestamp));
+        requestAnimationFrame(ts => this.gameloop(ts));
     }
 
-    update() {
+    update(deltaTimeMs) {
         this.mapGeneration.drawGrid();
-    }
-
-    objectPlacement() {
-        this.canvas.addEventListener("click", (e) => {
-            if (!this.selectedObject) return;
-
-            const rect = this.canvas.getBoundingClientRect();
-            const col = Math.floor((e.clientX - rect.left + this.mapGeneration.cameraX) / this.mapGeneration.cellSize);
-            const row = Math.floor((e.clientY - rect.top + this.mapGeneration.cameraY) / this.mapGeneration.cellSize);
-
-            this.placeObject(this.selectedObject, col, row);
-
-            if (!this.shiftHeld) {
-                this.selectedObject = null;
-            }
-        });
+        for (let id in this.objectsById) {
+            ObjectLogic.update(this.objectsById[id], this.mapGeneration.mapState);
+        }
     }
 
     placeObject(selectedObject, col, row) {
         const cell = this.mapGeneration.mapState[col]?.[row];
-
         if (cell && cell !== "node") {
-            this.messagedisplay("There already is a building!", true);
-            return;
+            return this.messagedisplay("There already is a building!", true);
         }
-
         if (selectedObject === "Miner" && cell !== "node") {
-            this.messagedisplay("Miners can only be placed on light yellow nodes!", true);
-            return;
+            return this.messagedisplay("Miners can only be placed on light yellow nodes!", true);
         }
 
-        const newObject = ObjectData.create(selectedObject, col, row);
-        if (newObject) {
-            if (!this.mapGeneration.mapState[col]) this.mapGeneration.mapState[col] = {};
-            this.mapGeneration.mapState[col][row] = newObject;
-            this.messagedisplay(`${selectedObject} placed at (${col}, ${row})`);
-        }
+        const id  = this.nextObjectId++;
+        const obj = ObjectData.create(selectedObject, col, row);
+        if (!obj) return;
+        obj.id  = id;
+        obj.col = col;
+        obj.row = row;
+
+        this.objectsById[id] = obj;
+        if (!this.mapGeneration.mapState[col]) this.mapGeneration.mapState[col] = {};
+        this.mapGeneration.mapState[col][row] = obj;
+
+        this.messagedisplay(`${selectedObject} placed at (${col}, ${row})`);
+    }
+
+    showInfoPanel(obj, pageX, pageY) {
+        const panel = document.getElementById("infoPanel");
+        panel.style.display = "block";
+        panel.style.left = `${pageX - 40}px`;
+        panel.style.top  = `${pageY + 100}px`;
+        panel.innerHTML = `
+            <strong>${obj.type} (ID: ${obj.id})</strong><br>
+            Storage: ${obj.storage || 0}${obj.capacity ? ` / ${obj.capacity}` : ""}<br>
+            Speed: ${obj.speed || obj.processSpeed || "—"}
+        `;
     }
 
     toolbar() {
-        this.shiftheld = false;
-        window.addEventListener("keydown", (e) => {
+        this.shiftHeld = false;
+        window.addEventListener("keydown", e => {
             if (e.key === "Shift") this.shiftHeld = true;
         });
-        window.addEventListener("keyup", (e) => {
+        window.addEventListener("keyup", e => {
             if (e.key === "Shift") this.shiftHeld = false;
         });
 
-        document.querySelectorAll(".object").forEach((item) => {
-            item.addEventListener("click", (e) => {
+        document.querySelectorAll(".object").forEach(item => {
+            item.addEventListener("click", e => {
                 this.selectedObject = e.target.getAttribute("data-type");
                 console.log(`Selected: ${this.selectedObject}`);
             });
@@ -91,48 +128,29 @@ class Main {
     }
 
     messagedisplay(message, isError = false) {
-        const chatMessages = document.getElementById("chatMessages");
-        const newMessage = document.createElement("div");
-
-        newMessage.textContent = message;
-        if (isError) newMessage.classList.add("error-message");
-
-        chatMessages.appendChild(newMessage);
-
-        const messagelimit = 10;
-        const messages = chatMessages.getElementsByTagName("div");
-        if (messages.length > messagelimit) {
-            chatMessages.removeChild(messages[0]);
-        }
-
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+        const chat = document.getElementById("chatMessages");
+        const div  = document.createElement("div");
+        div.textContent = message;
+        if (isError) div.classList.add("error-message");
+        chat.appendChild(div);
+        while (chat.children.length > 10) chat.removeChild(chat.firstChild);
+        chat.scrollTop = chat.scrollHeight;
     }
 
     buttonInput() {
-        const regenerateMap = document.getElementById("RegenerateMap");
-        regenerateMap.addEventListener("click", () => {
-            this.mapGeneration.generateMap(); // Clear and regen
+        document.getElementById("RegenerateMap").addEventListener("click", () => {
+            this.mapGeneration.generateMap();
             this.mapGeneration.adjustCanvasSize();
             this.mapGeneration.drawGrid();
             this.messagedisplay("Map has been regenerated!");
         });
-
-        const saveGame = document.getElementById("saveGame");
-        saveGame.addEventListener("click", () => {
-            console.log("Save game clicked");
-            // Save logic placeholder
-        });
-
-        const loadGame = document.getElementById("loadGame");
-        loadGame.addEventListener("click", () => {
-            console.log("Load game clicked");
-            // Load logic placeholder
-        });
+        document.getElementById("saveGame").addEventListener("click", () =>
+            console.log("Save game clicked")
+        );
+        document.getElementById("loadGame").addEventListener("click", () =>
+            console.log("Load game clicked")
+        );
     }
-
-    window = window.addEventListener("resize", () => this.mapGeneration.adjustCanvasSize());
 }
 
-window.onload = () => {
-    new Main();
-};
+window.onload = () => new Main();
