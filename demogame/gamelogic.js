@@ -79,7 +79,8 @@ class Main {
         if (this.activeInfoObj) {
             this._renderInfoPanel();
         }
-        Main.frameCount++
+        //Main.frameCount++
+        //reset frame somewhere so it doesnt gets to big
     }
 
     placeObject(selectedObject, col, row) {
