@@ -18,7 +18,7 @@ export default class ObjectData {
                     capacity: 10,
                     inputRequired: "ore",
                     output: "processedMaterial",
-                    processSpeed: 20 / 1, // 20 items every minute
+                    processSpeed: 10 / 1, // 20 items every minute
                     lastProcessedTime: performance.now(),
                     color: "green",
                 };
@@ -29,6 +29,7 @@ export default class ObjectData {
                     storage: 0,
                     capacity: 1,
                     transportspeed: 10/1,
+                    direction: "RIGHT",
                     color: "grey",
                 };
 

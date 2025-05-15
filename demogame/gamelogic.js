@@ -3,10 +3,12 @@ import MapGeneration from './mapgeneration.js';
 import ObjectLogic from './objectlogic.js';
 
 class Main {
+    frameCount = 0
     selectedObject = null;
     lastFrameTime  = 0;
     fps            = 60;
     frameDuration  = 1000 / this.fps;
+    activeInfoObj = null;
 
     constructor() {
         this.objectsById   = {};
@@ -73,6 +75,11 @@ class Main {
         for (let id in this.objectsById) {
             ObjectLogic.update(this.objectsById[id], this.mapGeneration.mapState);
         }
+
+        if (this.activeInfoObj) {
+            this._renderInfoPanel();
+        }
+        Main.frameCount++
     }
 
     placeObject(selectedObject, col, row) {
@@ -99,14 +106,23 @@ class Main {
     }
 
     showInfoPanel(obj, pageX, pageY) {
+        this.activeInfoObj = obj;       // remember which object we’re showing
+        this.infoX = pageX - 40;        // also store desired panel position
+        this.infoY = pageY + 100;
+        this._renderInfoPanel();        // draw it immediately
+    }
+
+    _renderInfoPanel() {
+        const obj   = this.activeInfoObj;
+        if (!obj) return;
         const panel = document.getElementById("infoPanel");
         panel.style.display = "block";
-        panel.style.left = `${pageX - 40}px`;
-        panel.style.top  = `${pageY + 100}px`;
-        panel.innerHTML = `
+        panel.style.left    = `${this.infoX}px`;
+        panel.style.top     = `${this.infoY}px`;
+        panel.innerHTML     = `
             <strong>${obj.type} (ID: ${obj.id})</strong><br>
             Storage: ${obj.storage || 0}${obj.capacity ? ` / ${obj.capacity}` : ""}<br>
-            Speed: ${obj.speed || obj.processSpeed || "—"}
+            Speed: ${obj.speed || obj.processSpeed || obj.transportspeed}
         `;
     }
 
