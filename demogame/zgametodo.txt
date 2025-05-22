@@ -1,0 +1,6 @@
+fix game zoom issue
+add new storage unit
+look if implementation of frames is nee for better per minute ratioes?
+built in delete mode
+make add row to conveyor
+    add arow on conveyor to show direction
