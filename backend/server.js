@@ -6,6 +6,9 @@ const session = require("express-session");
 const { stringify } = require("querystring");
 const PORT = 5500;
 
+//go into backend folder, then with node server.js start backend
+//cd backend
+
 // Middleware to parse JSON requests
 app.use(express.json());
 

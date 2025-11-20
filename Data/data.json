@@ -4,11 +4,12 @@
       "username": "dev",
       "password": "dev",
       "id": 1,
-      "currency": 30,
+      "currency": 0.01,
       "ownedGames": [
         "Satisfactory",
         "Bloodborne",
-        "Elden Ring"
+        "Elden Ring",
+        "Sekiro: Shadows Die Twice"
       ],
       "Wishlist": [
         "Factorio",
